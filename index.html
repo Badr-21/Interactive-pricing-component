@@ -3,50 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="main.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Interactive pricing component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
-  <header class="header">
-    <h1>Simple, traffic-based pricing</h1>
-    <p>Sign-up for our 30-day trial. No credit card required.</p>
-  </header>
+  <h1>Spli<br>tter</h1>
   <main class="container">
-    <section class="subscription">
-      <div class="page-views-price">
-        <p><span class="views">100k</span> Pageviews</p>
-        <p><span class="price">$16.00 </span>/month</p>
+    <section class="calculate">
+      <div class="bill">
+        <p>Bill</p>
+        <input type="number" name="bill" id="bill" placeholder="0">
       </div>
-      <div class="input-range"> 
-        <input type="range">
+      <div class="tip-selection">
+        <p>Select Tip %</p>
+        <div class="percentage">
+          <button>5%</button> 
+          <button>10%</button>
+          <button>15%</button>
+          <button>25%</button>
+          <button>50%</button>
+          <input type="number" name="custom-percentage" id="custom-percentage" placeholder="Custom">
+        </div>
       </div>
-      <div class="billing">
-        <p>Monthly Billing</p>
-        <p>Yearly Billing <span>25% discount</span></p>
+      <div class="number-of-people">
+        <div>
+          <p>Number of People</p>
+          <p class="zero">Can't be zero</p>
+        </div>
+        <input type="number" name="number-of-people" id="number-of-people" placeholder="0">
       </div>
     </section>
-    <section class="start-trial">
-      <div class="options">
-        <div>
-          <img src="images/icon-check.svg" alt="icon check">
-          <p>Unlimited websites</p>
+    <section class="result">
+      <div class="tip-amount">
+        <div class="text">
+          <p>Tip Amount</p>
+          <span>/ person</span>
         </div>
-        <div>
-          <img src="images/icon-check.svg" alt="icon check">
-          <p>100% data ownership</p>
-        </div>
-        <div>
-          <img src="images/icon-check.svg" alt="icon check">
-          <p>Email reports</p>
-        </div>
+        <div class="tip-amount-result">$0.00</div>
       </div>
-      <button>Start my trial</button>
+      <div class="total">
+        <div class="text">
+          <p>Total</p>
+          <span>/ person</span>
+        </div>
+        <div class="total-result">$0.00</div>
+      </div>
+      <button>Reset</button> 
     </section>
   </main>
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
